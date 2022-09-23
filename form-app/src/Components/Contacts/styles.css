@@ -1,0 +1,48 @@
+#container {
+    width: 400px;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px;
+  }
+  
+  ul,li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+.list {
+    margin: 1.5rem;
+}
+
+.list > li {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    display: flex;
+}
+
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+.btn > button {
+    padding: 0.5rem;
+    width: 5rem;
+    border-color: white;
+}
+
+.form {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: block;
+}
