@@ -49,10 +49,43 @@ function Todo() {
         localStorage.setItem("notes", JSON.stringify(newList))
     }
 
+    function ClearCompleted() {
+        let newToDoList = toDoList.filter(note => note.isChecked === false)
+        setToDoList(newToDoList)
+        localStorage.setItem("notes", JSON.stringify(newToDoList))
+    }
+
+    function allChecked() {
+        let statusChecked = toDoList.map(prevNote => {
+            let status;
+            if (prevNote.isChecked === false) {
+                status = true
+            } return status
+        })
+
+        let newNotes = toDoList.map(prevNote => {
+            if (prevNote.isChecked === false) {
+                prevNote.isChecked = !prevNote.isChecked
+            } return prevNote
+        })
+        if (statusChecked.includes(true)) {
+            setToDoList(newNotes)
+            localStorage.setItem("notes", JSON.stringify(newNotes))
+        } else {
+            let statusChange = newNotes.map(note => {
+                if (note.isChecked) {
+                    note.isChecked = !note.isChecked
+                } return note
+            }) 
+            setNoteList(statusChange)
+            localStorage.setItem("notes", JSON.stringify(statusChange))
+        }
+    }
+
   return (
     <div>
         <section className="todoapp">
-        <Input />
+        <Input handleSubmit={handleSubmit} />
         <section className="main">
             <input className="toggle-all" type="checkbox" checked={toDoList.find(note => note.isChecked === true) ? true : false} onChange={allChecked} />
             {
@@ -74,23 +107,23 @@ function Todo() {
         </section>
         <footer className="footer">
         <span className="todo-count">
-            <strong>2</strong>
+            <strong>{toDoList.filter((note) => note.isChecked === false).length} </strong>
             items left
         </span>
         <ul className="filters">
             <li>
-            <a href="#/" className="selected">
-                All
-            </a>
+            <a href="#/" id='All' onClick={() => setStatus("All")} className={status === "All" ? "selected" : ""}>All</a>
             </li>
             <li>
-            <a href="#/">Active</a>
+            <a href="#/" id='Active' onClick={() => setStatus("Active")} className={status === "Active" ? "selected" : ""}>Active</a>
             </li>
             <li>
-            <a href="#/">Completed</a>
+            <a href="#/" id='Completed' onClick={() => setStatus("Completed")} className={status === "Completed" ? "selected" : ""}>Completed</a>
             </li>
         </ul>
-        <button className="clear-completed">Clear completed</button>
+        {
+            toDoList.find(todo => todo.isChecked === true) && <button onClick={ClearCompleted} className="clear-completed">Clear Completed</button>
+        }
         </footer>
     </section>
     <footer className="info">

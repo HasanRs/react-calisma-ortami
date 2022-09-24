@@ -421,3 +421,14 @@ meta,
 [property="todo"] .view:focus-within button {
 	display: none !important;
 }
+
+.input-label {
+	font: 24px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    border: none;
+    font-weight: 300;
+    width: 85%;
+    height: 35px;
+    color: #4d4d4d;
+    padding: .1rem 1rem;
+}
