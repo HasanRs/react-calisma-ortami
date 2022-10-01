@@ -26,7 +26,7 @@ function Input({ handleSubmit }) {
         <input
           className="new-todo"
           placeholder="What needs to be done?"
-          autofocus=""
+          autoFocus=""
           onChange={handleChange}
           value={note.note}
         />
