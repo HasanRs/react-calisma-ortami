@@ -16,6 +16,7 @@ Instead of using this project, prefer  [Create React App](https://create-react-a
 -   Lifecycle
 -   Contacts App 
 -   ToDo App
+-   Style Definitions
 
 
 ### Dependencies:
