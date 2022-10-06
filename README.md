@@ -17,11 +17,17 @@ Instead of using this project, prefer  [Create React App](https://create-react-a
 -   Contacts App 
 -   ToDo App
 -   fetch API and Axios
+-   React Router
 
 
 ### Dependencies:
 
 -   Node.js  `>=`  8.12;
+-   Yarn  `>=`  1.12;
+-   React  `>=`  17.0.1;
+-   React DOM  `>=`  17.0.1;
+-   React Router DOM  `>=`  6.0.0-beta.0;
+-   React Scripts  `>=`  4.0.3;
 
 ### Up and running
 
