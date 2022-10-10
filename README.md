@@ -18,6 +18,8 @@ Instead of using this project, prefer  [Create React App](https://create-react-a
 -   ToDo App
 -   fetch API and Axios
 -   React Router
+-   Styled Components
+-   Memoization
 
 
 ### Dependencies:
@@ -51,4 +53,9 @@ Instead of using this project, prefer  [Create React App](https://create-react-a
 
 ## License
 
-[MIT]()  © Hasan Baygül
+        //----------------------------------MIT License-----------------------------------//
+        //                                                                                //
+        //                           Copyright (c) 2022 HasanRs                           //        
+        // [Licence](https://github.com/HasanRs/react-calisma-ortami/blob/master/LICENSE) //
+        //                                                                                //
+        //--------------------------------------------------------------------------------//
